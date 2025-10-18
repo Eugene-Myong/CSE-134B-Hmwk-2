@@ -3,8 +3,106 @@
     <head>
         <meta charset="UTF-8">
         <title>Professional Information Page</title>
+        <!--Custom element-->
+        <style>
+            certification-block{
+                display: block;
+                width: 400px;
+                height: 400px;
+                border: 2px solid black;
+            }
+        </style>
     </head>
     <body>
-        <h1>Welcome to my page(professional)</h1>
+        <header>
+             <nav> <!--navbar, will ideally either be centered or left aligned-->
+                <a href="home.html">Home Page</a>
+                <a href="contact.html">Contact Page</a>
+                <a href="about.html">About Page</a> 
+            </nav>
+            <h1>Professional Information</h1>
+        </header>
+
+        <section><!--links to areas of the page, click in certifications should scroll page down to certifications area-->
+            <!-- these links shouls also be in their own box-->
+             <h2>Quick Links</h2>
+            <a href="">Education</a>
+            <a href="">Portfolio</a>
+            <a href="">Certifications</a>
+        </section>
+
+        <section><!--resume section, would like it to be in page as well as downloadable-->
+            <!--
+            <embed src="documents/Eugene Myong Resume.pdf" type="application/pdf" width="100%" height="600px" />
+            -->
+            <img src="images/Eugene Myong Resume-1.png" width="400"><br>
+            <a href="documents/Eugene Myong Resume.pdf" target="_blank">View/Download my resume</a>
+        </section>
+
+        <hr>
+
+        <section><!--Education-->
+        <!--will detail my education, little bit of high school and mainly college-->
+            <h2>Education</h2>
+                <div><!--is div really the best here?-->
+                    <img src="images/Seal_of_the_University_of_California,_San_Diego.svg.png" width="100">
+                    <p>Currently attending University of California San Diego, working towards a Bachelors of Science in Mathematics-Computer Science, with a minor in Data Science.</p>
+                    <p>Estimated graduation data: June 2026 with a GPA of 3.6</p>
+                    <p>Extra Curriculurs include:</p>
+                    <ul>
+                        <li>ACM</li>
+                        <li>DS3</li>
+                        <li>SUMS</li>
+                        <li>Badminton</li>
+                    </ul>
+                </div>
+                <br>
+                <div>
+                    <img src="images/ghslogo.jpg" width="100">
+                    <p>Graduated from Richard Gahr High School in 2022 with a GPA of 4.2</p>
+                    <p>Extra Curriculurs include:</p>
+                    <ul>
+                        <li>Video Game Club President</li>
+                        <li>Varsity Badminton Player and Team Captain</li>
+                        <li>Taekwondo Demonstration Team</li>
+                        <li></li>
+                    </ul>
+
+                </div>
+        </section>
+        
+        <hr>
+
+        <section><!--Portfolio-->
+        <!-- portfolio of projects, each should have its own box with a display image and a link to what is most likely a github repo-->
+            <div>
+            <h2>Projects Portfolio</h2>
+            <div class="project">
+                <img src="images/sga.png" width="400"><br>
+                <a href="https://github.com/Eugene-Myong/StudentGradesAnalysis" target="_blank">Student Grade Analysis</a>
+                <p>A group project done for COGS 108: Data Science in Practice. My team and I use Data Science methods to explore what factors affect a students academic performance and dive deeper to find out why.</p>
+            </div>
+        </section>
+
+        <hr>
+
+        <section><!--Certifications-->
+        <!--each certification should have its own box showcasing an image of the cert as well as a credly link to it-->
+                <h2>Certifications</h2>
+                <certification-block cert="CC">
+                    <h3>ISC<sup>2</sup> CC</h3>
+                    <img src="images/ISC2 CC-1.png" width="400"><br>
+                    <a href="https://www.credly.com/badges/ec7a01c7-deaa-4881-833f-9c50370e8382" target="_blank">Credly Link</a>
+                </certification-block>
+                <certification-block cert="A+">
+                    <h3>CompTIA A+</h3>
+                    <img src="images/CompTIA A+ ce certificate-1.png" width="400"><br>
+                    <a href="https://www.credly.com/badges/c78ba532-eae3-490e-9bf4-914f0c88f620" target="_blank">Credly Link</a>
+                </certification-block>
+        </section>
+
+        <hr>
+
+
     </body>
 </html>
