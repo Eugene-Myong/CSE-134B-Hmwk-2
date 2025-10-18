@@ -5,7 +5,47 @@
         <title>About Page</title>
     </head>
     <body>
-        <h1>Welcome to my page(experiments)</h1>
-        
+        <h1>Experiments.html</h1>
+         <!--audio-->
+         <h2>Audio</h2>
+        <audio controls src="experiment-audio/Discord Ping Sound.mp3"></audio>
+        <br>
+        <!--video-->
+        <h2>Video</h2>
+        <video controls width="400" src="experiment-video/RDT_20251010_225930.mp4" ></video>
+        <br>
+        <!--picture-->
+        <h2>Picture</h2>
+        <picture>
+            <source srcset="experiment-images/dripnet.webp" media="(orientation: portrait)" />
+            <img src="experiment-images/dripknight.webp" width ="400" alt="the drippiest hollow knight to ever exist" />
+        </picture>
+        <br>
+        <!--template-->
+        <h2>Template (although you wont see it)</h2>
+        <template>
+            <hgroup>
+                <h1>Template Header</h1>
+                <p>Template header description</p>
+            </hgroup>
+            <p>More template stuff</p>
+        </template>
+        <br>
+        <!--canvas-->
+        <h2>Canvas</h2>
+        <canvas id="myCanvas" width="200" height="100"></canvas>
+        <script>
+            const c = document.getElementById("myCanvas");
+            const ctx = c.getContext("2d");
+            ctx.fillStyle = "brown";
+            ctx.fillRect(50, 25, 100, 50);
+        </script>
+        <br>
+        <!--source-->
+        <h2>Source</h2>
+        <video controls width="400">
+            <source src="experiment-video/RDT_20251010_225930.webm" type="video/webm" />
+            <source src="experiment-video/RDT_20251010_225930.mp4" type="video/mp4" />
+        </video>
     </body>
 </html>
