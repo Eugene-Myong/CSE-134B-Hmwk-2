@@ -3,25 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <title>Contact Page</title>
+        <link rel="icon" href="images/bigbrain.png" />
     </head>
     <body>
-        <section><!--hello world custom element:prints Hello world! to the console-->
-            <hello-world-console></hello-world-console>
-            <script>
-                class HelloWorldConsole extends HTMLElement {
-                    connectedCallback() {
-                        console.log('Hello world!');
-                    }   
-                }
-                customElements.define('hello-world-console', HelloWorldConsole);
-            </script>
-            <noscript>
-                <p>
-                    <span class="noscript-text"> Ah, I see you have disabled scripting. What a decision. Now I can't 
-                    script! How dare you! How rude!</span>
-                </p>
-            </noscript>
-        </section>
         <main>
             <header>
                 <nav> <!--navbar, will ideally either be centered or left aligned-->
@@ -37,7 +21,7 @@
                 <h2>Or send me a message down below!</h2>
             </section>
 
-            <form><!--contact me section-->
+            <form><!--contact me section, could probably add more-->
                 <fieldset>
                     <legend><b>Right here!</b></legend>
                     <label for="name">Name: </label>

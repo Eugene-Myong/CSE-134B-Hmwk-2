@@ -1,10 +1,38 @@
+<!--Editors Note: Lots of content is unfinished, some images I need are not in my
+currrent possession (some are on a hard drive back home) and text descriptions are not
+finalized either (since the length affects the layout and image formatting etc) 
+I tried to implement examples of at least the professional page since that one probably matters
+the most, but I will add proper text and images as we go along
+At least I hope that's ok I saw on slack that we can use placeholder text and images 
+-->
+
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
         <title>Home Page</title>
+        <link rel="icon" href="images/bigbrain.png" />
     </head>
     <body>
+        <section><!--hello world custom element:prints Hello world! to the console-->
+            <hello-world-console></hello-world-console>
+            <script>
+                class HelloWorldConsole extends HTMLElement {
+                    connectedCallback() {
+                        console.log('Hello world!');
+                    }   
+                }
+                customElements.define('hello-world-console', HelloWorldConsole);
+            </script>
+            <noscript>
+                <p>
+                    <span class="noscript-text"> Ah, I see you have disabled scripting. What a decision. Now I can't 
+                    script! How dare you! How rude!</span>
+                </p>
+            </noscript>
+        </section>
+         
         <main>
             <header>
                 <nav> <!--navbar, will ideally either be centered or left aligned-->
@@ -14,9 +42,8 @@
                 </nav>
                 <h1>The Eugene Myong Site</h1>
                 <h2>Developed by yours truly</h2>
-                <img src="images/bigbrain.png" alt="image of me"><br>
+                <img src="images/bigbrain.png" alt="image of me"><br> <!--placeholder-->
                 <img src="images/placeholder.jpeg" alt="placeholder image" width="400">
-                <!--need background image-->
             </header>  
             <section>
                 <h2>Welcome to my site!</h2>
@@ -50,6 +77,9 @@
                 <svg width="100" height="100" viewBox="0 0 100 100">
                     <circle cx="50" cy="50" r="40" fill="tomato" />
                 </svg>
+                <dialog open>
+                    If you have and suggestions or questions, visit my contact page and let me know!
+                </dialog>
             </section>
             <hr>
             <footer>
@@ -58,50 +88,3 @@
         </main>
     </body>
 </html>
-
-
-<!-- tage I gotta use, mark used when used
-html    used
-b       used
-head    used
-i       used
-title	used
-strong  used
-meta	used
-em      used
-link	used
-a       used
-script*	used
-img     used
-style*	used
-picture used
-body	used
-iframe  used
-main	used
-svg*    used
-h1	    used
-ul      used
-h2	    used
-ol      used
-h3	    used
-li      used
-p	    used
-form    used
-section	used
-label   used
-header	used
-fieldset    used
-footer  used
-legend  used
-nav     used
-input   used
-div	    used
-textarea    used
-span	used
-article used
-br	    used
-progress    used
-button*	used
-dialog  used
-noscript    used
--->
