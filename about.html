@@ -3,16 +3,93 @@
     <head>
         <meta charset="UTF-8">
         <title>About Page</title>
+        <style>
+            quote-generator{
+                display: block;
+                width: 400px;
+                height: 125px;
+                border: 2px solid black;
+            }
+        </style>
     </head>
     <body>
-        <header>
-            <h1>Welcome to my page(about)</h1>
+        <header id="top">
             <nav> <!--navbar, will ideally either be centered or left aligned-->
                 <a href="prof.html">Professional Page</a>
-                <a href="contact.html">Contact Page</a>
-                <a href="about.html">About Page</a> 
+                   <a href="contact.html">Contact Page</a>
+                <a href="home.html">Home Page</a> 
             </nav>
+            <h1>More About Me</h1>
         </header>
+        
+        <main>
+            <picture>
+                <source srcset="images/placeholder-portrait.jpg" media="(orientation: portrait)">
+                <img src="images/placeholder.jpeg" width="400" alt="a beautiful sunset over the shimmering ocean">
+            </picture>
+
+            <quote-generator>
+                <blockquote>
+                    <p >“If it ain't broke, then break it.”</p>
+                    <cite>— Eugene Myong, sometime in high sschool.</cite>
+                </blockquote>
+                <button id="new-quote">New quote</button>
+            </quote-generator>
+
+            <section>
+                <h2>Welcome to my About Me page!</h2>
+                <p>
+                    Here you'll get to discover more about me like my hobbies, intrests, and maybe 
+                    even the thingamajiggy that I'm currrently working on (<i>but that's a trade secret
+                    so no sharing ok</i>). 
+                </p>
+                <p> 
+                    Click on any of these links to jump to their respective sections, or just start 
+                    scrolling!
+                </p>
+                <div>
+                    <a href="#boy-scouts">Boy Scouts</a>
+                    <a href="#taekwondo">Taekwondo</a>
+                    <a href="#badminton">Badminton</a>
+                </div>
+            </section>
+
+            <hr>
+
+            <article id="boy-scouts">
+                <h2>Boy Scouts</h2>
+                <p>
+                    I joined the Cub Scouts of America in sixth grade, so I was quite late to the party.              
+                </p>
+                <a href="#top">Back to top</a>
+            </article>
+
+            <hr>
+
+            <article id="taekwondo">
+                <h2>Taekwondo</h2>
+                <p>
+                    My mom came up to me one day and said "How would you like to know how to fight"? And 
+                    me being me I said "I don't really want to" but she made me join anyway.  
+                </p>
+                <a href="#top">Back to top</a>
+            </article>
+
+            <hr>
+
+            <article id="badminton">
+                <h2>Badminton</h2>
+                <p>
+                    So in high school, our Physical Education class had one day a year where the Badminton 
+                    would put on a demonstration.
+                </p>
+                <a href="#top">Back to top</a>
+            </article>
+            <hr>
+            <footer>
+                <i>Trademark Eugene Myong, All Rights Reserved</i>
+            </footer>
+        </main>
         
     </body>
 </html>

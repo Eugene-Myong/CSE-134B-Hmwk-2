@@ -5,36 +5,58 @@
         <title>Contact Page</title>
     </head>
     <body>
-        <header>
-             <nav> <!--navbar, will ideally either be centered or left aligned-->
-                <a href="prof.html">Professional Page</a>
-                <a href="contact.html">Contact Page</a>
-                <a href="about.html">About Page</a> 
-            </nav>
-            <h1>Contact Me</h1>
-        </header>
+        <section><!--hello world custom element:prints Hello world! to the console-->
+            <hello-world-console></hello-world-console>
+            <script>
+                class HelloWorldConsole extends HTMLElement {
+                    connectedCallback() {
+                        console.log('Hello world!');
+                    }   
+                }
+                customElements.define('hello-world-console', HelloWorldConsole);
+            </script>
+            <noscript>
+                <p>
+                    <span class="noscript-text"> Ah, I see you have disabled scripting. What a decision. Now I can't 
+                    script! How dare you! How rude!</span>
+                </p>
+            </noscript>
+        </section>
+        <main>
+            <header>
+                <nav> <!--navbar, will ideally either be centered or left aligned-->
+                    <a href="prof.html">Professional Page</a>
+                    <a href="home.html">Home Page</a>
+                    <a href="about.html">About Page</a> 
+                </nav>
+                <h1>Contact Me</h1>
+            </header>
         
+            <section>
+                <h2>To contact me, send me an email at <a href="mailto:eugenemyong@gmail.com">eugenemyong@gmail.com</a></h2>
+                <h2>Or send me a message down below!</h2>
+            </section>
 
-
-        <section>
-            <h2> If not, then you can send me an email at <a href="mailto:eugenemyong@gmail.com">eugenemyong@gmail.com</a></h2>
-        </section>
-
-        <section>
-            <h2>or send me a message right here!</h2>
             <form><!--contact me section-->
-                <!--send me a message with name, email, message-->
-                <label for="name">Name: </label>
-                <input type="text" id="name" placeholder="Your name here..." required>
-                <br><br>
-                <label for="email">Email: </label>
-                <input type="email" id="email" placeholder="Your email here..." required>
-                <br><br>
-                <label for="message">Message: </label>
-                <textarea id="message" rows="5" cols="30" placeholder="Your message here..." required></textarea>
-                <br><br>
-                <input type="Submit" value="Submit" />
+                <fieldset>
+                    <legend><b>Right here!</b></legend>
+                    <label for="name">Name: </label>
+                    <input type="text" id="name" placeholder="Your name here..." required>
+                    <br><br>
+                    <label for="email">Email: </label>
+                    <input type="email" id="email" placeholder="Your email here..." required>
+                    <br><br>
+                    <label for="message">Message: </label>
+                    <textarea id="message" rows="5" cols="30" placeholder="Your message here..." required></textarea>
+                    <br><br>
+                    <p><em>Please allow a couple days for me to respond. I promise I'm not ignoring you.</em></p>
+                    <input type="Submit" value="Submit" />                    
+                </fieldset>
             </form>
-        </section>
+            <hr>
+            <footer>
+                <i>Trademark Eugene Myong, All Rights Reserved</i>
+            </footer>
+        </main>
     </body>
 </html>
